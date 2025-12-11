@@ -9,7 +9,7 @@ WORKDIR /app
 
 # 安装依赖
 # COPY requirements.txt .
-RUN uv pip install --no-cache-dir -r requirements.txt --system
+# RUN uv pip install --no-cache-dir -r requirements.txt --system
 
 # 复制应用代码到工作目录
 # COPY main.py .
