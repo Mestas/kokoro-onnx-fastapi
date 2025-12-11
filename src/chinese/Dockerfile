@@ -8,12 +8,12 @@ RUN pip install uv
 WORKDIR /app
 
 # 安装依赖
-COPY requirements.txt .
+# COPY requirements.txt .
 RUN uv pip install --no-cache-dir -r requirements.txt --system
 
 # 复制应用代码到工作目录
-COPY main.py .
-COPY cache.py .
+# COPY main.py .
+# COPY cache.py .
 # COPY download_deps.py .
 # COPY . . # 或者直接复制所有内容，如果确定没有其他不必要的文件
 
