@@ -47,7 +47,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # ---- 复制依赖文件 ----
-COPY requirements.txt /app/
+COPY src/chinese/requirements.txt /app/
 
 # ---- 安装 Python 依赖 ----
 RUN pip install --no-cache-dir -r requirements.txt
@@ -57,8 +57,8 @@ COPY src/chinese /app        # 把 src/chinese 整个目录放进 /app
 # 如果 requirements.txt 也在 src/chinese 就改成 COPY src/chinese/requirements.txt /app/
 
 # ---- 暴露端口（Railway 会注入 $PORT）----
-ENV PORT=8000
-EXPOSE 8000
+ENV PORT=8210
+EXPOSE 8210
 
 # ---- 启动命令 ----
 # 注意：文件在 /app 下，因此 app 实例是 main:app
