@@ -22,8 +22,8 @@ COPY src/chinese ./
 # COPY models ./models
 
 # ---- 暴露端口（Railway 会注入 $PORT）----
-ENV PORT=8000
-EXPOSE 8000
+ENV PORT=8210
+EXPOSE 8210
 
 # ---- 启动命令 ----
 # 文件现在在 /app 下，因此 app 实例是 main:app
